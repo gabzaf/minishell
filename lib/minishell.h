@@ -10,10 +10,16 @@
 
 typedef struct s_terminal
 {
-	char	**envp;	
+	char	*input;
+	char	**split_input;
+	t_env	*env_vars;
 }	t_terminal;
 
-char	*ft_strdup(const char *s);
-int	ft_strlen(const char *str);
+typedef struct s_env
+{
+	char	*name;
+	char	*value;
+	struct t_env	*next;
+}	t_env;
 
 #endif

@@ -1,23 +1,41 @@
 #include "minishell.h"
 
-void	ft_init_terminal(t_terminal *terminal, char **env_params)
+char	**ft_alloc_envp(char **envp)
 {
-	terminal->env_vars = ft_init_env(env_params);
-	terminal->env_path = ft_getenv(terminal->env_vars, "PATH");
+	char	**temp_envp;
+	int	i;
+
+	i = 0;
+	while (envp[i++]);
+	temp_envp = (char **)malloc(i * sizeof(char *));
+	if (!temp_envp)
+		exit (1);
+	i = 0;
+	while (envp[i])
+	{
+		temp_envp[i] = ft_strdup(envp[i]);
+		if (!temp_envp[i])
+			exit (1);
+		i++;
+	}
+	temp_envp[i] = NULL;
+	return (temp_envp);
 }
 
-int	main(int argc, char **argv, char **env_params)
+int	main(int argc, char **argv, char **envp)
 {
 	t_terminal	terminal;
+	int	i = 0;
 
 	if (argc != 1 || !argv)
 		printf("Erro! Consertar esse printf!");
 	terminal = (t_terminal){0};
-	ft_init_terminal(&terminal, env_params);
-	while (1)
+	terminal.envp = ft_alloc_envp(envp);
+	while (terminal.envp[i])
 	{
 		//signals();
-		ft_get_inputs(&terminal);
+		printf("%s\n", terminal.envp[i]);
+		i++;
 	}
 	return (0);
 }
