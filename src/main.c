@@ -31,11 +31,6 @@ int	main(int argc, char **argv, char **envp)
 		printf("Erro! Consertar esse printf!");
 	terminal = (t_terminal){0};
 	terminal.envp = ft_alloc_envp(envp);
-	while (terminal.envp[i])
-	{
-		//signals();
-		printf("%s\n", terminal.envp[i]);
-		i++;
-	}
+	minishell(&terminal);
 	return (0);
 }
