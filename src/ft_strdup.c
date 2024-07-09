@@ -1,5 +1,5 @@
 
-#include "minishell.h"
+#include "../lib/minishell.h"
 
 char	*ft_strdup(const char *s)
 {

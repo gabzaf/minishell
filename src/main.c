@@ -1,4 +1,4 @@
-#include "minishell.h"
+#include "../lib/minishell.h"
 
 char	**ft_alloc_envp(char **envp)
 {
@@ -24,13 +24,12 @@ char	**ft_alloc_envp(char **envp)
 
 int	main(int argc, char **argv, char **envp)
 {
-	t_terminal	terminal;
-	int	i = 0;
+	t_dyn_array	env_glbl_vars;
 
 	if (argc != 1 || !argv)
 		printf("Erro! Consertar esse printf!");
-	terminal = (t_terminal){0};
-	terminal.envp = ft_alloc_envp(envp);
-	minishell(&terminal);
+	env_glbl_vars = (t_dyn_array){0};
+	env_glbl_vars.array = ft_alloc_envp(envp);
+	minishell(&env_glbl_varsv);
 	return (0);
 }

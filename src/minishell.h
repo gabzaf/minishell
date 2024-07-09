@@ -8,12 +8,14 @@
 # include <readline/readline.h>
 # include <readline/history.h>
 
-typedef struct s_terminal
+typedef struct	s_dyn_array
 {
-	char	**envp;	
-}	t_terminal;
+	int	len;
+	char	**array;
+}	t_dyn_array;
 
 char	*ft_strdup(const char *s);
 int	ft_strlen(const char *str);
+int	ft_blank_input(char *str);
 
 #endif
