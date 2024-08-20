@@ -18,9 +18,9 @@ t_tree*	free_tree(t_tree* tr)
 {
 	if (!empty_tree(tr))
 	{
-		free_tree(tr->left); 	/* libera lst */
-		free_tree(tr->right); 	/* libera rst */
-		free(tr); 		/* libera raiz */
+		free_tree(tr->left); 	
+		free_tree(tr->right); 	
+		free(tr); 		
 	}
 	return NULL;
 }
@@ -50,24 +50,26 @@ void	print_tree(t_tree* tr)
 
 int	main()
 {
-	//sub-árvore 'd'
+	//sub-tree 'd'
 	t_tree	*tr1 = create_tree('d', create_empty_tree(), create_empty_tree());
-	//sub-árvore 'b'
+	//sub-tree 'b'
 	t_tree	*tr2 = create_tree('b', create_empty_tree(), tr1);
-	//sub-árvore 'e'
+	//sub-tree 'e'
 	t_tree	*tr3 = create_tree('e', create_empty_tree(), create_empty_tree());
-	//sub-árvore 'f'
+	//sub-tree 'f'
 	t_tree	*tr4 = create_tree('f', create_empty_tree(), create_empty_tree());
-	//sub-árvore 'c'
+	//sub-tree 'c'
 	t_tree	*tr5 = create_tree('c', tr3, tr4);
-	//árvore 'a'
+	//tree 'a'
 	t_tree	*tr = create_tree('a', tr2, tr5);
 	print_tree(tr);
 	printf("\n");
+	//add nodes
 	tr->left->left = create_tree('x', create_tree('y', create_empty_tree(), create_empty_tree()), 
 			create_tree('z', create_empty_tree(), create_empty_tree()));
 	print_tree(tr);
 	printf("\n");
+	//remove node
 	tr->right->left = free_tree(tr->right->left);
 	print_tree(tr);
 	printf("\n");
