@@ -97,7 +97,7 @@ Limited handling of syntax errors
 
 Readline may cause memory leaks (permitted by project guidelines)
 
-#Authors
+# Authors
 
 Pedro Monteiro
 
