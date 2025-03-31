@@ -74,10 +74,10 @@ env
 # Redirect output to a file
 ls > output.txt
 
-# Use pipes
+## Use pipes
 grep "error" log.txt | sort | uniq
 
-Technical Details
+## Technical Details
 
 Written in C
 
@@ -89,7 +89,7 @@ Manages processes using pipes and redirections
 
 Handles signals properly for interactive mode
 
-Known Limitations
+## Known Limitations
 
 Does not support advanced shell features such as job control
 
@@ -97,12 +97,12 @@ Limited handling of syntax errors
 
 Readline may cause memory leaks (permitted by project guidelines)
 
-Authors
+#Authors
 
 Pedro Monteiro
 
 Gabriel Affonso
 
-License
+### License
 
 This project is developed as part of the 42 curriculum and follows its academic policies.
