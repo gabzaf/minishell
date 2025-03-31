@@ -62,16 +62,16 @@ Usage
 
 Minishell works similarly to Bash. Enter commands and execute them as you would in a normal shell. Here are a few examples:
 
-# Run a command
+## Run a command
 echo "Hello, world!"
 
-# Change directory
+## Change directory
 cd /home/user
 
-# View environment variables
+## View environment variables
 env
 
-# Redirect output to a file
+## Redirect output to a file
 ls > output.txt
 
 ## Use pipes
