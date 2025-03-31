@@ -1,10 +1,10 @@
-Minishell
+# Minishell
 
-Introduction
+## Introduction
 
-Minishell is a simple shell implementation written in C as part of the 42 curriculum. This project was developed collaboratively by Pedro and me. The goal was to create a functional shell that mimics basic behaviors of Bash while reinforcing our understanding of processes, file descriptors, and system calls.
+Minishell is a simple shell implementation written in C as part of the 42 curriculum. This project was developed collaboratively by Pedro and Gabriel. The goal was to create a functional shell that mimics basic behaviors of Bash while reinforcing our understanding of processes, file descriptors, and system calls.
 
-Features
+## Features
 
 Displays a prompt while waiting for user input
 
