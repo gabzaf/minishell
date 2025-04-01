@@ -99,3 +99,11 @@ Gabriel Affonso
 ### License
 
 This project is developed as part of the 42 curriculum and follows its academic policies.
+
+# Real-World Applications of Minishell Concepts
+
+The skills and concepts implemented in Minishell—such as command execution, process management, pipes, redirections, signal handling, and environment variable manipulation—are not just academic exercises. They form the backbone of many practical applications across industries like cybersecurity, systems programming, DevOps, and beyond.
+
+## Why Companies Care
+The knowledge gained from Minishell directly translates to skills in demand by industries that rely on secure, efficient and scalable systems. Whether it’s a cybersecurity firm hunting vulnerabilities, a DevOps team streamlining deployments or a tech giant optimizing cloud infrastructure, the ability to manipulate and understand shell behavior is a critical asset. For someone passionate about cybersecurity and red teaming, this project lays a foundation for scripting exploits, analyzing attack surfaces, and mastering system-level security challenges.
+
