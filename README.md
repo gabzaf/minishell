@@ -47,7 +47,7 @@ Minishell is a simple shell implementation written in C as part of the 42 curric
 # Usage
 `$ git clone https://github.com/yourusername/minishell.git`
 
-`$ cd`
+`$ cd minishell`
 
 ## Compile the project
 `$ make`
