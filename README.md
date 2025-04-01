@@ -2,100 +2,93 @@
 
 ## Introduction
 
-Minishell is a simple shell implementation written in C as part of the 42 curriculum. This project was developed collaboratively by Pedro and Gabriel. The goal was to create a functional shell that mimics basic behaviors of Bash while reinforcing our understanding of processes, file descriptors, and system calls.
+Minishell is a simple shell implementation written in C as part of the 42 curriculum. This project was developed collaboratively by Pedro and Gabriel. The goal was to create a functional shell that mimics basic behaviors of Bash while reinforcing our understanding of processes, file descriptors and system calls.
 
 ## Features
 
-Displays a prompt while waiting for user input
+- Displays a prompt while waiting for user input
 
-Implements a working command history
+- Implements a working command history
 
-Executes commands using absolute paths, relative paths, or based on the PATH environment variable
+- Executes commands using absolute paths, relative paths or based on the PATH environment variable
 
-Supports input and output redirections (<, >, <<, >>)
+- Supports input and output redirections (<, >, <<, >>)
 
-Implements pipes (|) to connect command outputs to inputs
+- Implements pipes (|) to connect command outputs to inputs
 
-Expands environment variables ($VARIABLE)
+- Expands environment variables ($VARIABLE)
 
-Handles exit status ($?)
+- Handles exit status ($?)
 
-Properly manages signals:
+- Properly manages signals:
 
-Ctrl-C: Displays a new prompt on a new line
+	- Ctrl-C: Displays a new prompt on a new line
 
-Ctrl-D: Exits the shell
+	- Ctrl-D: Exits the shell
 
-Ctrl-\: Does nothing in interactive mode
+	- Ctrl-\: Does nothing in interactive mode
 
-Implements the following built-in commands:
+- Implements the following built-in commands:
 
-echo (with -n option)
+	- echo (with -n option)
 
-cd (with relative or absolute paths)
+	- cd (with relative or absolute paths)
 
-pwd
+	- pwd
 
-export
+	- export
 
-unset
+	- unset
 
-env
+	- env
 
-exit
+	- exit
 
-Installation
+# Usage
+`$ git clone https://github.com/yourusername/minishell.git`
 
-To compile and run Minishell, follow these steps:
+`$ cd`
 
-# Clone the repository
-git clone https://github.com/yourusername/minishell.git
-cd minishell
+## Compile the project
+`$ make`
 
-# Compile the project
-make
+## Run the shell
+`$ ./minishell`
 
-# Run the shell
-./minishell
+### Run a command
+`$ echo "Hello, world!"`
 
-Usage
+### Change directory
+`$ cd /home/user`
 
-Minishell works similarly to Bash. Enter commands and execute them as you would in a normal shell. Here are a few examples:
+### View environment variables
+`$ env`
 
-## Run a command
-echo "Hello, world!"
+### Redirect output to a file
+`$ ls > output.txt`
 
-## Change directory
-cd /home/user
+### Use pipes
+`$ grep "error" log.txt | sort | uniq`
 
-## View environment variables
-env
+#### Technical Details
 
-## Redirect output to a file
-ls > output.txt
+- Written in C
 
-## Use pipes
-grep "error" log.txt | sort | uniq
+- Uses readline for input handling
 
-## Technical Details
+- Implements command execution using fork() and execve()
 
-Written in C
+- Manages processes using pipes and redirections
 
-Uses readline for input handling
-
-Implements command execution using fork() and execve()
-
-Manages processes using pipes and redirections
-
-Handles signals properly for interactive mode
+- Handles signals properly for interactive mode
 
 ## Known Limitations
 
-Does not support advanced shell features such as job control
+- Does not support advanced shell features such as job control
 
-Limited handling of syntax errors
+- Limited handling of syntax errors
 
-Readline may cause memory leaks (permitted by project guidelines)
+- Readline may cause memory leaks (permitted by project guidelines)
 
 # Authors
 
